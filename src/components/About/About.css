@@ -1,0 +1,248 @@
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+    }
+
+    100% {
+        background-size: 200% 200%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #fff;
+    }
+}
+
+body {
+    font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+}
+a {
+	text-decoration: none;
+}
+
+
+.outerboxpageone {
+	box-sizing:content-box;
+    
+	
+        flex-wrap: wrap;
+}
+
+
+.intro {
+	position: relative;
+	width: 100%;
+	height: 90vh;
+    
+}
+
+
+.left {
+	float: left;
+	height: 100%;
+	width: 60%;
+	padding: 3rem 0 6rem;
+	display: table;
+    background-image: url('../../assets/banner/aboutusleft.jpg');
+    background-size:cover;
+	background-position: center; 
+	 background-position-y: -100px;
+	background-position-x: -90px; 
+    opacity: 0.6;
+}
+
+
+#spanabout {
+  font-size: 14px;
+  
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  margin-bottom: 4rem;
+}
+#aboutush1{
+	font-size:4rem;
+            line-height: 5rem;
+            font-weight: 200;
+	margin-bottom: 550px;
+	margin-left: 300px;
+	margin-top: -20px;
+	
+	
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+                glow 2500ms linear infinite 2000ms;
+}
+h1 {
+	font-size:4rem;
+            line-height: 5rem;
+            font-weight: 200;
+	margin-bottom: 3rem;
+    animation: reveal 3000ms ease-in-out forwards 200ms,
+                glow 2500ms linear infinite 2000ms;
+}
+
+h1 + p {
+    margin-top: 8rem;
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 8rem;
+}
+p + a {
+  font-size: 1.6rem;
+  color: #000;
+}
+
+.slider {
+	float: right;
+	position: relative;
+	width: 40%;
+	height: 100%;
+}
+
+.slider li {
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size:auto;
+    
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	transition: clip .7s ease-in-out, z-index 0s .7s;
+	clip: rect(0, 100vw, 100vh, 100vw);
+	display: table;
+    
+    
+}
+#slider1{
+    background-color: #493570;
+    background-size: cover;
+    background-position: 47% 55%;
+    
+    
+}
+#slider2{
+    background-color: rgb(49, 115, 102);
+    background-size: cover;
+    background-position: 47% 55%;
+   
+}
+#slider3{
+    background-color: #8d8d37;
+    background-size: cover;
+    background-position: 47% 55%;
+   
+}
+
+.center-y {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+    
+}
+
+#abouth3 {
+	font-size:4rem;
+            line-height: 5rem;
+            font-weight: 200;
+            animation: reveal 3000ms ease-in-out forwards 200ms,
+                glow 2500ms linear infinite 2000ms;
+
+    color:white;
+
+	@media (max-width:400px) {
+                
+		font-size: 2rem;
+		line-height: 2.8rem;
+		
+	}
+}
+
+#abouth3 + #aboutpara {
+	font-size: 1.6rem;
+	display: inline-block;
+	color:white;
+	margin-top: 2rem;
+	@media (max-width:400px) {
+                
+		font-size: 1.4rem;
+		line-height: 2.8rem;
+		
+	}
+    
+}
+
+#abouth3, #abouth3 + #aboutpara {
+	opacity: 0;
+	transition: opacity .7s 0s, transform .5s .2s;
+	transform: translate3d(0, 50%, 0);
+}
+
+li.current #abouth3, li.current #abouth3 + #aboutpara {
+	opacity: 1;
+	transition-delay: 1s;
+	transform: translate3d(0, 0, 0);
+}
+
+li.current {
+	z-index: 1;
+	clip: rect(0, 100vw, 100vh, 0);
+}
+li.prev {
+	clip: rect(0, 0, 100vh, 0);
+}
+
+.slider #aboutnav {
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 10;
+}
+
+#aboutnav .aboutspan {
+	display: inline-block;
+	border-radius: 50%;
+	width: 1.2rem;
+	height: 1.2rem;
+  min-width: 12px;
+  min-height: 12px;
+	background: #fff;
+	margin: 0 1rem;
+  transition: transform .3s;
+}
+a.current_dot {
+	transform: scale(1.4);
+}
+ 
+@media screen and (max-width: 400px) {
+	.intro {
+	  height: auto; /* Revert back to auto height */
+	  display: flex; /* Use flexbox for column layout */
+	  flex-direction: column; /* Stack items vertically */
+	}
+  #aboutush1{
+	margin-left: 50px;
+	margin-top: 40px;
+  }
+	.left {
+	  width: 100%; /* Occupy full width */
+	  height :0px; /* Take 50% of viewport height */
+	  padding-bottom: 0; /* Remove bottom padding */
+	  background-position: center; /* Adjust background position */
+	  background-size: cover; /* Adjust background size */
+	}
+  
+	.slider {
+	  width: 100%; /* Occupy full width */
+	  height: 70vh; /* Take 50% of viewport height */
+	}
+  }
+  

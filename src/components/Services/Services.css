@@ -1,0 +1,538 @@
+/* Services CSS */
+
+/* @keyframes cresent {
+    0% {
+        transform: translate(-30px, 30px) scale(0.9);
+        box-shadow: none;
+    }
+
+    50% {
+        transform: translate(0px, 0px) scale(1.02);
+        box-shadow: 0 0 10px #480f05, 0 0 80px 8px #e0c817;
+        background-color: #ddd315;
+    }
+
+    100% {
+        transform: translate(30px, -30px) scale(0.9);
+        box-shadow: none;
+    }
+} */
+
+@keyframes reveal {
+    80% {
+        letter-spacing: 8px;
+    }
+
+    100% {
+        background-size: 200% 200%;
+    }
+}
+
+@keyframes glow {
+    40% {
+        text-shadow: 0 0 8px #fff;
+    }
+}
+
+@keyframes fadeInfirstbox {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInsecondbox {
+    from {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInthirdbox {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes titleservice {
+    from {
+        opacity: 0;
+
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-moz-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+#services {
+    padding: 8rem 0 3rem;
+
+    background-size: cover;
+    position: relative;
+
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        min-height: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        background: var(--dark-layer-color);
+        pointer-events: none;
+    }
+
+    @media (max-width:992px) {
+        padding: 3rem 0;
+    }
+
+
+
+
+
+
+    /* .stars {
+        background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        z-index: 0;
+    } */
+
+    .twinkling {
+        width: 10000px;
+        height: 100%;
+        background: transparent url("https://images.pexels.com/photos/1350463/pexels-photo-1350463.jpeg?auto=compress&cs=tinysrgb&w=600") repeat;
+        background-size: 300px 300px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+
+        -moz-animation: move-background 70s linear infinite;
+        -ms-animation: move-background 70s linear infinite;
+        -o-animation: move-background 70s linear infinite;
+        -webkit-animation: move-background 70s linear infinite;
+        animation: move-background 70s linear infinite;
+
+    }
+
+    .clouds {
+        width: 10000px;
+        height: 100%;
+        background: transparent url("https://media.istockphoto.com/id/1358927461/photo/currency-and-exchange-stock-chart-for-finance-and-economy-display.jpg?b=1&s=612x612&w=0&k=20&c=qs_ZlWvOYpDTDySBOBsOEMmT7zgieOnVf9znAbOnpp4=") repeat;
+        background-size:100vw 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0.4;
+
+        -moz-animation: move-background 150s linear infinite;
+        -ms-animation: move-background 150s linear infinite;
+        -o-animation: move-background 150s linear infinite;
+        -webkit-animation: move-background 150s linear infinite;
+        animation: move-background 150s linear infinite;
+    }
+
+    img {
+        height: 63vh;
+        width: 63vh;
+        position: absolute;
+        z-index: 3;
+        right: 20px;
+    }
+
+
+
+    .title_headling {
+        text-align: center;
+        max-width: 50rem;
+        margin-top: -150px;
+        margin-left: 375px;
+        position: relative;
+        z-index: 4;
+
+
+
+        #servicesh3 {
+
+            
+            /* background: 50% 100% / 50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent); */
+            /* -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;  */
+            /* font-size: 10vw; */
+            font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', serif;
+            animation: reveal 3000ms ease-in-out forwards 200ms,
+                glow 2500ms linear infinite 2000ms;
+               
+
+
+            width: 90%;
+            font-size:4rem;
+            /* line-height: 1rem; */
+            font-weight: 200;
+            
+            /* color: var(--white-color);
+            
+            animation: titleservice 4s infinite alternate;  */
+
+            /* @media (max-width:767px) {
+                
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                
+            } */
+            
+        }
+
+        /* & p{
+            width:90%;
+            font-size: 1.214rem;
+            line-height: 2rem;
+            color:var(--font-color);
+
+            @media (max-width:767px){
+                width:100%;
+            }
+        } */
+    }
+
+    .service_wrapper {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+
+        @media (max-width:767px) {
+            flex-direction: column;
+        }
+
+        .service_box {
+            width: calc(100% / 3 - 2rem);
+            padding: 2.8571rem 2.1429rem;
+            border-radius: 1.4286rem;
+
+            box-sizing: border-box;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 3;
+
+            /*
+            opacity: 0;
+            animation: fadeIn 3s forwards infinite alternate;*/
+            /* 5 seconds animation duration */
+
+
+
+
+            @media (max-width:992px) {
+                width: calc(100% / 2 - 1rem);
+            }
+
+            @media (max-width:767px) {
+                width: 100%;
+
+            }
+
+            /* .moon {
+                background-image: linear-gradient(30deg, #13223f, #0e1a30);
+                width: 256px;
+                height: 256px;
+                border-radius: 50%;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .moon::before {
+                content: "";
+                background-color: orange;
+                position: relative;
+                display: block;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                z-index: -1;
+                animation: 3.2s cresent linear infinite alternate;
+            } */
+
+            @media (max-width: 768px) {
+                .moon {
+                    width: 160px;
+                    height: 160px;
+                }
+            }
+
+
+
+            .number {
+                position: absolute;
+                font-size: 4.2857rem;
+                line-height: 4.2857rem;
+                right: 2.8571rem;
+                top: 2.1429rem;
+                opacity: .07;
+                margin: 0;
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+            }
+
+            .service_icon {
+                font-size: 2.2857rem;
+                width: 5rem;
+                height: 5rem;
+                line-height: 5rem;
+                border-radius: 50%;
+                color: var(--primary-color);
+                background: var(--primary-bg);
+                text-align: center;
+
+                &.green_icon {
+                    color: var(--green-color);
+                    background: var(--green-color-bg);
+                }
+
+                &.blue_icon {
+                    color: var(--blue-color);
+                    background: var(--blue-color-bg);
+                }
+            }
+
+            & h5 {
+                font-weight: 600;
+                color: var(--white-color);
+                font-size: 1.7143rem;
+                line-height: 2.4286rem;
+                opacity: 0;
+            }
+
+            & p {
+                font-size: 1.2143rem;
+                line-height: 2rem;
+                color: var(--white-color);
+                font-weight: 500;
+                opacity: 0;
+                /* Initially hide the p tag */
+                transition: opacity 0.5s ease;
+                flex-grow: 1; /* Allow the content to grow vertically */
+      overflow: hidden; 
+            }
+
+            .read {
+                font-size: 1rem;
+                font-weight: 700;
+                color: var(--white-color);
+                margin-top: 2.1429rem;
+                display: inline-block;
+                text-transform: capitalize;
+                &:hover{
+                    color: #e21056;
+                }
+            }
+
+
+
+        }
+
+
+
+        #first_box {
+            background-image: url('../../assets/banner/corporatemeet.jpg');
+            background-size: 100% 110%;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            animation-delay: 5s;
+            animation: fadeInfirstbox 8s forwards infinite alternate;
+
+            &:hover {
+
+                background-image: url('../../assets/banner/darkbluebackground.png');
+                /* Set the background color to black on hover */
+                cursor: pointer;
+
+                & p {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+
+                & h5 {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+
+                .number {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+            }
+
+        }
+
+        #second_box {
+            background-image: url('../../assets/banner/businessadvisory.jpg');
+            background-size: 100% 110%;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            
+            animation: fadeInsecondbox 8s forwards infinite alternate;
+            
+            
+
+            &:hover {
+
+                
+
+                background-image: url('../../assets/banner/darkbluebackground.png');
+                /* Set the background color to black on hover */
+                cursor: pointer;
+
+                & p {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+
+                & h5 {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+
+                .number {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+            }
+
+        }
+
+        #third_box {
+            background-image: url('../../assets/banner/personalfinance.jpg');
+            background-size: 100% 110%;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 1;
+            
+            animation: fadeInthirdbox 8s forwards infinite alternate;
+            
+            &:hover {
+
+                background-image: url('../../assets/banner/darkbluebackground.png');
+                /* Set the background color to black on hover */
+                cursor: pointer;
+
+                & p {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+
+                & h5 {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+
+                .number {
+                    opacity: 1;
+                    /* Make the p tag visible on hover */
+                }
+            }
+
+        }
+
+        #third_box {
+            @media (min-width: 767px) and (max-width: 992px) {
+                width: calc(100% / 2 - 4rem);
+                margin: 0 auto;
+                /* Center the box horizontally */
+                margin-bottom: 2rem;
+                /* Optional: Adjust margin for better spacing */
+
+            }
+        }
+    }
+
+
+
+@media  (max-width: 400px){
+    #servicesh3{
+        margin-left: -280px;
+        font-size:1rem;
+        font-weight: 100;
+        padding-top: 45px;
+    }
+}
+
+@media (max-width: 400px) {
+    #second_box, #third_box {
+        animation: none !important; /* Stop animation */
+    }
+}
+
+}
