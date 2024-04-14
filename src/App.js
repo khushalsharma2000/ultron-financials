@@ -7,6 +7,7 @@ import Blogonerender from "./pages/Blogonerender";
 import Blogtworender from "./pages/Blogtworender";
 import Blogthreerender from "./pages/Blogthreerender";
 import Blogfourrender from "./pages/Blogfourrender";
+import { BrowserRouter } from "react-router-dom";
 
 
 // let allRoutes = createBrowserRouter(
