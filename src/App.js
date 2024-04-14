@@ -7,7 +7,7 @@ import Blogonerender from "./pages/Blogonerender";
 import Blogtworender from "./pages/Blogtworender";
 import Blogthreerender from "./pages/Blogthreerender";
 import Blogfourrender from "./pages/Blogfourrender";
-import { BrowserRouter } from "react-router-dom";
+
 
 
 // let allRoutes = createBrowserRouter(
@@ -25,7 +25,7 @@ import { BrowserRouter } from "react-router-dom";
 // )
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    
    
     <div className="App">
       
@@ -39,7 +39,7 @@ function App() {
   
   </Routes>
   </div>
-  </BrowserRouter>
+ 
   );
 }
 
