@@ -24,14 +24,8 @@ import Blogfourrender from "./pages/Blogfourrender";
 // )
 function App() {
   return (
-    // <Router>
-    //   <div className="App">
-    //     <Routes> {/* Wrap Routes around Route components */}
-    //       <Route exact path="/" element={<Completesection />} />
-    //       <Route exact path="/Servicespageone" element={<Servicesrender />} /> {/* Use the 'element' prop instead of 'component' */}
-    //     </Routes>
-    //   </div>
-    // </Router>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+   
     <div className="App">
       
     <Routes >
@@ -44,6 +38,7 @@ function App() {
   
   </Routes>
   </div>
+  </BrowserRouter>
   );
 }
 
