@@ -1,64 +1,100 @@
-import React from 'react';
-import './Blogdetails.css'
+import React, { useEffect, useRef } from 'react';
+import './Blogdetails.css'; // Import the CSS file
 
-function Slider() {
+const Slider = () => {
+  const scrollTrackerRef = useRef(null);
+
+  useEffect(() => {
+    const loadScript = async () => {
+      try {
+        const script = document.createElement('script');
+        script.src = 'https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js';
+        script.async = true;
+        document.body.appendChild(script);
+
+        script.onload = () => {
+          if (window.ScrollTimeline) {
+            const scrollTrackingTimeline = new window.ScrollTimeline({
+              source: document.scrollingElement,
+              orientation: 'block',
+              scrollOffsets: [CSS.percent(0), CSS.percent(100)],
+            });
+
+            scrollTrackerRef.current.animate(
+              {
+                transform: ['scaleX(0)', 'scaleX(1)']
+              },
+              {
+                timeline: scrollTrackingTimeline,
+              }
+            );
+          } else {
+            console.error('ScrollTimeline is not defined after script load');
+          }
+        };
+
+        script.onerror = () => {
+          console.error('Error loading the scroll-timeline script');
+        };
+      } catch (error) {
+        console.error('Error creating the script:', error);
+      }
+    };
+
+    loadScript();
+
+    return () => {
+      const script = document.querySelector('script[src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"]');
+      if (script) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <div className="slider-container">
-         <div class="background-container-blog">
-
-<div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div></div>
-
-
-     
-
-
-      <div className="slider-four">
-        <div className="content-box1" id='cbox4'>
-          
-          <h1 id = 'blog4h1'>The UAE Tax Landscape: How Budgeting Empowers Businesses!</h1>
-          <p id ='blog4p1'>The introduction of Corporate Tax in the UAE requires businesses to sharpen their financial acumen. While navigating these new regulations might seem complex, a well-crafted budget can be your secret weapon.</p>
-          
+    <div className="blog-app-container">
+      <div className="blog-slider-container">
+        <div className="blog-background-container">
+          <div className="blog-stars"></div>
+          <div className="blog-twinkling"></div>
+          <div className="blog-clouds"></div>
         </div>
-        <div className="content-box8">
-          
-          <h1 id='blog4h2'>
-          Budgeting for Tax Optimization </h1>
-          <p id = 'blog42p'>
-          Precise Taxable Profit <br /> <br />
-          Streamlined VAT Compliance <br /> <br />
-          Strategic Tax Decisions  </p>
-        </div>
-        <div className="content-box3">
-          
-          <h1 id = 'blog4h3'>Beyond Compliance: The Value of Proactive Budgeting</h1>
-          <p id = 'blog43p'>
-          Enhanced Cost Control
+        <div classname="scroll-tracker" ref={scrollTrackerRef}></div>
+        <main>
+          <article>
+          <h3 className='blogtitle'>Crypto Mining - A Lucrative Investment (But Proceed with Caution)</h3>
+            <p className='blogp'>Crypto mining validates transactions, secures blockchain networks, and rewards miners with new coins. Is it a viable investment for you? Let's explore.</p>
+            <img className='blogimg4' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3FtsrSs_S4fq3IehIVwjIt9GLAlXEi2hf5U19ScCu7g&s" alt="Businessman in debt concept" />
+            <h3 className='blogtitle'>Real-World Examples: </h3>
+            <ul>
+              <li>  Marathon Digital Holdings, a US publicly traded company, operates large-scale Bitcoin mining facilities. </li>
+              <li>Riot Blockchain, another US-based company, focuses on Bitcoin mining with environmentally friendly practices.</li>
+              <li>Some individuals have built successful mining operations, as seen in stories of early Bitcoin miners turning home rigs into significant holdings shared on online forums.</li>
 
- <br /> <br />
- Informed Investment Decisions <br /><br />
- Improved Cash Flow Management </p>
-        </div>
-        <div className="content-box7">
-          
-          <h1 id = 'blog4h4'>Building a Tax-Friendly Budget</h1>
-          <p id = 'blog44p'>Categorize Expenses <br /> <br />
-          Stay Updated <br /> <br />
-          Seek Professional Guidance <br />  <br />
-          In the evolving landscape of UAE corporate tax, a well-defined budget becomes a powerful tool. It empowers you to navigate tax regulations with confidence, maximize profitability, and ensure compliance.
-
-
-
-
-
-</p>
-        </div>
-        
-      </div>  
-      
+            </ul>
+          </article>
+          <article>
+            <h3 className='blogtitle'>Investing as a Retail Investor:</h3>
+            <ul>
+              <li>Direct Mining: Purchase mining rigs, which are expensive and require technical knowledge.
+</li>
+              <li> Mining Pools: Contribute your hashrate (processing power) for a share of the pool's rewards. Lower barrier to entry but lower rewards.</li>
+<li>Cloud Mining: Least technical option, but comes with upfront costs and potential scams.</li>
+              
+            </ul>
+<h3 className='blogtitle'>Benefits, Risks and What to expect</h3>
+            <ul>
+              <li>Earn crypto rewards, contribute to the blockchain, and potentially profit from rising cryptocurrency prices.
+</li>
+              <li> High upfront costs, volatile crypto market, fluctuating mining difficulty, and environmental concerns.</li>
+<li>Seek Professional Guidance.</li>
+              <li>Don't expect instant riches. Profitability depends on factors like electricity costs, chosen coin, and market conditions. Embrace a long-term investment approach and be prepared for volatility.</li>
+            </ul>
+          </article>
+        </main>
+      </div>
     </div>
   );
-}
+};
 
 export default Slider;

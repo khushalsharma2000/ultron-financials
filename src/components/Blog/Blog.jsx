@@ -86,7 +86,7 @@ const BlogArea = () => {
                     <SwiperSlide>
                     <div className="blogs-item hvr-float-shadow wow fadeInLeft" data-wow-delay="0.9s">
                         <div className="blog-img">
-                            <img id = 'blog3' src="https://mygate.com/wp-content/uploads/2023/03/52.jpg" alt="" className="img-fluid" />
+                            <img id = 'blog3' src="https://bsmedia.business-standard.com/_media/bs/img/article/2023-09/29/full/1696008957-6591.jpg" alt="" className="img-fluid" />
                             <p className="blog-time">
                                 <span className="blog-date">22</span>
                                 <span className="blog-month">Mar,24</span>
