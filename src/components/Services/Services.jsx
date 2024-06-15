@@ -4,7 +4,7 @@ import './Services.css';
 // import { faLaptopCode, faChartBar, faCopy } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 // import { useInView } from 'react-intersection-observer';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import Servicespageone from '../../pages/Servicespageone.jsx';
 export default function Services() {
   // const [ref, inView] = useInView({
@@ -39,6 +39,9 @@ export default function Services() {
               <div className="service_content">
                 <h5>CORPORATE FINANCE</h5>
                 <p>We offer facilitation of various sources of funding to up and becoming businesses ranging from Working Capital Loan, Loan against Property, Overdraft Facility, Letter of Credits, Bank Guarantees, Long-Term Loans to meet short and long range needs.</p>
+                <Link to="/Corporatefinance" className="read">
+                    Read more
+                  </Link>
                 {/* <a href="/" className="read">
                   Read more
                 </a> */}
@@ -51,6 +54,9 @@ export default function Services() {
               <div className="service_content">
                 <h5>PERSONAL FINANCE</h5>
                 <p>Whether it's your Dream Home or an urgent cash crunch, we offer a wide range of Personal Financing solutions including Personal Loan, Real-Estate Mortgage, Credit Card, Auto Loan.</p>
+                <Link to="/Personalfinance" className="read">
+                    Read more
+                  </Link>
                 {/* <a href="/" className="read">
                   Read more
                 </a> */}
@@ -64,6 +70,9 @@ export default function Services() {
                 <h5>BUSINESS ADVISORY</h5>
                 <p>Right from starting a business till it's growth we offer a wide array of services encompassing
                   Business Setup, Taxation, Compliance, Accounting, CFO Services, Management Advisory.</p>
+                  <Link to="/Businessadvisory" className="read">
+                    Read more
+                  </Link>
                 {/* <a href="/" className="read">
                   Read more
                 </a> */}
@@ -84,9 +93,9 @@ export default function Services() {
                 <div className="service_content">
                   <h5>CORPORATE FINANCE</h5>
                   <p>We offer facilitation of various sources of funding to up and becoming businesses ranging from Working Capital Loan, Loan against Property, Overdraft Facility, Letter of Credits, Bank Guarantees, Long-Term Loans to meet short and long range needs.</p>
-                  {/* <Link to="/Servicespageone" className="read">
+                  <Link to="/Corporatefinance" className="read">
                     Read more
-                  </Link> */}
+                  </Link>
                    {/* <a href="/" className="read">
                     Read more
                   </a> */}
@@ -103,9 +112,9 @@ export default function Services() {
                 <div className="service_content">
                   <h5>PERSONAL FINANCE</h5>
                   <p>Whether it's your Dream Home or an urgent cash crunch, we offer a wide range of Personal Financing solutions including Personal Loan, Real-Estate Mortgage, Credit Card, Auto Loan.</p>
-                  {/* <Link to="/Servicespagetwo" className="read">
+                  <Link to="/Personalfinance" className="read">
                     Read more
-                  </Link> */}
+                  </Link>
                    {/* <a href="/" className="read">
                     Read more
                   </a> */}
@@ -119,6 +128,9 @@ export default function Services() {
                   <h5>BUSINESS ADVISORY</h5>
                   <p>Right from starting a business till it's growth we offer a wide array of services encompassing
                     Business Setup, Taxation, Compliance, Accounting, CFO Services, Management Advisory.</p>
+                    <Link to="/Businessadvisory" className="read">
+                    Read more
+                  </Link>
                   {/* <a href="/" className="read">
                     Read more
                   </a> */}

@@ -58,7 +58,7 @@ const BlogArea = () => {
                             <p>Feeling the weight of debt stifle your company's growth? You're not alone.</p>
 
                             <div className="read-more-btn">
-                <Link to="/blogone" target="_blank">Read More</Link>
+                <Link to="/blogone" >Read More</Link>
                 </div>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ const BlogArea = () => {
                             <p>UAE's Golden Key is Closer Than You Think: Own Your Dream & Save with Buyout Services!</p>
 
                             <div className="read-more-btn">
-                <Link to="/blogtwo" target="_blank">Read More</Link>
+                <Link to="/blogtwo" >Read More</Link>
                 </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@ const BlogArea = () => {
                             <p>Introduction of Corporate Tax in the UAE requires businesses to sharpen their financial acumen.</p>
 
                             <div className="read-more-btn">
-                <Link to="/blogthree" target="_blank">Read More</Link>
+                <Link to="/blogthree" >Read More</Link>
                 </div>
                         </div>
                     </div>
@@ -118,7 +118,7 @@ const BlogArea = () => {
                             <p>Crypto mining is a viable investment opportunity for you? Let's explore..</p>
 
                             <div className="read-more-btn">
-                <Link to="/blogfour" target="_blank">Read More</Link>
+                <Link to="/blogfour" >Read More</Link>
                 </div>
                         </div>
                     </div>

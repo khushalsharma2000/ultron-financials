@@ -5,6 +5,7 @@ const Slider = () => {
   const scrollTrackerRef = useRef(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const loadScript = async () => {
       try {
         const script = document.createElement('script');
